@@ -325,3 +325,7 @@ describe( "GET nombres", function() {
 ~~~
 
 Por último se ha configurado codeship para realizar el despliege de nuestra aplicación cada vez que hacemos un push hacia github con [este tutorial](https://blog.codeship.com/heroku-github-nodejs-deployment/).
+
+### Ejercicio 8: Preparar la aplicación con la que se ha venido trabajando hasta este momento para ejecutarse en un PaaS, el que se haya elegido.
+
+Esto ya se ha hecho en el ejercicio 7.
