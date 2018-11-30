@@ -1,0 +1,46 @@
+---
+ - hosts: webservers
+   user: jesus
+   tasks:
+
+   - name: Instalar python 2.7.
+     become: yes
+     become_user: root		
+     apt: pkg=python state=present
+
+   - name: Instalar python 3.6.
+     become: yes
+     become_user: root	
+     apt: pkg=python3.6 state=present
+
+   - name: Instalar pip.
+     become: yes
+     become_user: root		
+     apt: pkg=python-pip state=present
+
+   - name: Instalar git.
+     become: yes
+     become_user: root		
+     apt: pkg=git state=present
+
+   - name: Instalar pipenv.
+     become: yes
+     become_user: root		
+     pip: name=pipenv	
+
+   - name: Instalar distutils.
+     become: yes
+     become_user: root		
+     apt: pkg=python3-distutils state=present
+
+   - name: Clonar proyecto.
+     become: yes
+     become_user: root		
+     git: repo=https://github.com/mesagon/Proyecto-CC-MII.git dest=/home/jesus/prueba force=yes
+
+   - name: Establecer entorno virtual.
+     become: yes
+     become_user: root
+     shell: pipenv install
+     args:
+       chdir: /home/jesus/prueba
