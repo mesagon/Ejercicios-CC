@@ -40,7 +40,6 @@ Además, en el fichero /etc/ansible/ansible.cfg hay que descomentar la línea "h
 
 Antes de acceder con ansible mediante ssh a la MV, debemos de crear un par clave pública/clave privada, de forma que la clave privada la ponemos en el sistema anfitrión en ~/.ssh/ en el home del usuario que vaya a ejecutar Ansible. Mientras que la clave publica tendremos que copiarla en la MV, en el archivo ~/.ssh/authorized_keys, donde ~ es el home del usuario con el que queremos iniciar sesión en la MV cuando nos conectemos mediante ssh desde el sistema anfitrión. En este caso, para el provisionamiento vamos iniciar sesión en la MV con el usuario root, el cual tiene permisos de superusuario. Por tanto, copiamos la clave pública en el archivo authorized_keys que se encuentra en el home del usuario root en la MV.
 
-
 Para probar que Ansible puede acceder mediante ssh a la MV, ejecutamos desde la máquina anfitriona
 
 ~~~
